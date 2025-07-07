@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import gzip
 import argparse
 import sys
@@ -245,7 +247,7 @@ def checkBias(biasvec):
     std = np.std(biasvec)
     mean = np.mean(biasvec)
     median = np.median(biasvec)
-    if (mean < 0.5 or mean > 2): 
+    if (mean < 0.5 or mean > 2):
         print("WARNING... Bias vector has a mean outside of typical range (0.5, 2).")
         print("Consider running with a larger -x option if problems occur")
         print("Mean\t%s" % mean)
